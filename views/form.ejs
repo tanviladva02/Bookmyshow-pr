@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fonts/icon/remixicon.css" type="text/css">
+    <link rel="stylesheet" href="/css/form.css" type="text/css">
+</head>
+<body>
+
+    <a href="/">
+        <i class="ri-arrow-left-line back"></i>
+    </a>
+
+    <form action="/movie/addData" method="post" enctype="multipart/form-data">
+        <div class="main">
+           <div class="flex justify">
+                <div class="col-5">
+                    <!-- <label>Title :</label><br> -->
+                    <input type="text" placeholder="Enter the title of Movie" id="title" name="title" class="space margin">
+                </div>
+                <div class="col-6">
+                    <!-- <label>Rating :</label><br> -->
+                    <input type="text" placeholder="Enter the Rating of Movie" id="rate" name="rate" class="space">
+                </div>
+           </div>
+           <div class="flex">
+            <div class="col-6">
+                <label>Cinema :</label><br>
+                <input type="checkbox" name="cinema" value="2d">2D
+                <input type="checkbox" name="cinema" value="3d">3D <br>
+                <input type="checkbox" name="cinema" value="4dx">4DX
+                <input type="checkbox" name="cinema" value="4dx-3d">4DX-3D
+            </div>
+            <div class="col-6">
+                <label>Language :</label><br>
+                <input type="checkbox" name="language" value="hindi">hindi
+                <input type="checkbox" name="language" value="english">english <br>
+                <input type="checkbox" name="language" value="gujarati">gujarati
+            </div>
+           </div>
+            <div>
+                <!-- <label>Length :</label><br> -->
+                <input type="text" name="length" placeholder="Enter the length of Movie" id="length" class="space top">
+            </div>
+           <div class="flex">
+            <div class="col-9">
+                <label>Type :</label><br>
+                <input type="checkbox" name="type" value="drama">Drama
+                <input type="checkbox" name="type" value="action">Action
+                <input type="checkbox" name="type" value="romantic">Romantic <br>
+                <input type="checkbox" name="type" value="horror">Horror
+                <input type="checkbox" name="type" value="comedy">Comedy
+                <input type="checkbox" name="type" value="Biography">Biography <br>
+                <input type="checkbox" name="type" value="crime">Crime
+                <input type="checkbox" name="type" value="Psychological">Psychological
+                <input type="checkbox" name="type" value="Social">Social
+            </div>
+            <div class="col-3"> 
+                <label>Certificate :</label><br>
+                <input type="radio" name="certificate" value="u/a">U/A <br>
+                <input type="radio" name="certificate" value="a">A <br>
+                <input type="radio" name="certificate" value="s">S
+            </div>
+           </div>
+            <div>
+                <label>Release Date :</label><br>
+                <input type="date" name="date" placeholder="Enter Date of Movie" id="date" class="space">
+            </div>
+            <div>
+                <label>Poster Image :</label><br>
+                <input type="file" name="poster_img" placeholder="upload the Poster image" id="poster_img" class="space">
+            </div>
+            <div>
+                <label>Background Image :</label><br>
+                <input type="file" name="bg_img" placeholder="upload the background image" id="bg_img" class="space">
+            </div>
+            <div>
+                <!-- <label>Description :</label><br> -->
+                <!-- <input type="textarea" placeholder="Enter the Description of Movie" id="description"> -->
+                 <textarea name="description" rows="5" id="description" placeholder="Enter movie Description" class="space"></textarea>
+            </div>
+            <div>
+                <!-- <input type="submit" value="submit" class="btn space"> -->
+                <button>Submit</button>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

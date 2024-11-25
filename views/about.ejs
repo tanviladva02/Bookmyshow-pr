@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/about.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/roboto/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/icon/remixicon.css" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container">
+            <div class="row justify-between align-items-center">
+                <a href="javascript:void(0)" class="logo">
+                    <img src="/img/logo.png" alt="logo.png" title="logo.png" width="150" height="50">
+                </a>
+                <input type="text" placeholder="Search for Movies,Events,Plays,Sports and Activities" class="search">
+                <div class="align-items-center flex">
+                    <a href="javascript:void(0)" class="btn">Sign in</a>
+                    <a href="/movie/form" target="_blank" class="movie"><i class="ri-add-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about">
+            <div class="about-bg relative">
+                <img src="/<%= movies.bg_img %>" alt="movies.bg_img" title="movie.bg_img" width="100%" height="450px"/>
+                <div class="container">
+                    <div class="about-main">
+                        <div class="flex">
+                            <div class="about-img">
+                                <a href="javascript:void(0)" class="relative">
+                                    <img src="/<%= movies.poster_img%>" alt="<%=movies.poster_img%>"
+                                        title="<%=movies.poster_img%>" width="240" height="390" class="relative"/>
+                                    <h6>In cinemas</h6>
+                                </a>
+                            </div>
+                            <div class="about-content">
+                                <h1>
+                                    <%= movies.title %>
+                                </h1>
+                                <a href="javascript:void(0)">
+                                    <div class="flex justify-between movie-details align-items-center">
+                                        <i class="ri-star-fill"></i>
+                                        <span>
+                                            <%= movies.rate %>/10 (1.5k Votes) >
+                                        </span>
+                                        <a href="javascript:void(0)" class="about-content-btn">Rate Now</a>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0)" class="flex movie-details2">
+                                    <h5>
+                                        <%= movies.cinema %>
+                                    </h5>
+                                    <h5>
+                                        <%= movies.language %>
+                                    </h5>
+                                </a>
+                                <div class="flex movie-details3">
+                                    <h4>
+                                        <%= movies.length %>
+                                    </h4>
+                                    <h4>
+                                        <%= movies.type %>
+                                    </h4>
+                                    <h4>
+                                        <%= movies.certificate %>
+                                    </h4>
+                                    <h4>
+                                        <%= movies.date %>
+                                    </h4>
+                                </div>
+                                <a href="javascript:void(0)" class="btn">Book tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-more">
+                <div class="container">
+                    <h3>About the movie</h3>
+                <p>
+                    <%= movies.description %>
+                </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
