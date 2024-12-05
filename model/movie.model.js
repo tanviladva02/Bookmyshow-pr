@@ -3,7 +3,7 @@ const movie = new mongoose.Schema({
     title: String,
     rate: String,
     cinema: [String],
-    language: String,
+    language: [String],
     length: String,
     type: [String],
     certificate: String,

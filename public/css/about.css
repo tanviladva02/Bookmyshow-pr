@@ -108,6 +108,10 @@ a{
     top:0;
     left:0;
  } */
+  .about-bg > img{
+    /* opacity: 0.5; */
+    filter: brightness(40%);
+  }
 .about-main{
     position: absolute;
     top:7%;
@@ -118,6 +122,9 @@ a{
 }
 .about-img h6{
     color:var(--theme-white);
+    background-color: var(--theme-black);
+    width:100%;
+    text-align: center;
     font-size: 12px;
     position: absolute;
     bottom: 0;
