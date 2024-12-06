@@ -1,7 +1,24 @@
 const express = require("express");
 const ejs = require("ejs");
 const path = require('path');
-const connection = require("./connect/db");
+const mongoose = require("mongoose");
+// const connection = require("./connect/db");
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(
+      "mongodb+srv://tanviladva01:tanvi_123@cluster0.5doqt.mongodb.net/collection",
+      { useNewUrlParser: true, useUnifiedTopology: true ,serverSelectionTimeoutMS:5000}
+    );
+    console.log("Mongoose is connected");
+  } catch (err) {
+    console.error("Connection error:", err);
+  }
+};
+
+connectDB();
+
+
 const movie_route = require("./routes/movie.routes")
 const movie = require("./model/movie.model");
 const user_route = require("./routes/user.routes");
@@ -30,6 +47,6 @@ app.get("/form", (req, res) => {
 })
 
 app.listen(port, async (err) => {
-    await connection;
+    // await connection;
     (err) ? console.log("something went wrong...", err) : console.log("server is runnig at port ", port);
 })
